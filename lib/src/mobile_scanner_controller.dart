@@ -260,7 +260,7 @@ class MobileScannerController {
   ///
   /// [path] The path of the image on the devices
   Future<bool> analyzeImage(String path) async {
-    final isSuccess = await methodChannel.invokeMethod('analyzeImage', byteData);
+    final isSuccess = await methodChannel.invokeMethod('analyzeImage', path);
     return isSuccess == true;
   }
 
